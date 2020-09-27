@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoVortx {
+  margin: 30px auto;
+  width: 150px;
+  display: flex;
+  justify-self: center;
+  user-select: none;
+  animation: in 500ms forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes in {
+  0% {
+    transform: translateX(1000px) rotate(1turn) translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+input[type="text"] {
+  position: relative;
+  display: flex;
+  align-self: flex-end;
+  right: 6%;
+  width: 30%;
+  line-height: 2;
+  border-radius: 5px 5px 0 0;
+  border: solid 1px #d5d5d5;
+  border-bottom: none !important;
+  background-color: #f1f1f1;
+  outline-color: transparent;
+  outline: none;
+}
+input[type="text"]:focus {
+  line-height: 2;
+  border-radius: 5px 5px 0 0;
+  border: solid 1px #d5d5d5;
+  background-color: #f1f1f1;
+  outline-color: transparent;
+}
+
+.tabela {
+  border: solid 1px #d5d5d5;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  width: 90%;
+  margin: 0 auto;
+  animation: fade-in 500ms forwards;
+}
+
+.tabela td {
+  text-align: center;
+}
+
+.bolinha {
+  margin: 5px auto;
+  border-radius: 15% 50% 50% 50%;
+  background-color: yellow;
+  width: 30px;
+  height: 30px;
+  border: 3px solid black;
+}
+
+
+
+.bolinha.verde {
+  animation: rodando-frente linear 500ms infinite forwards;
+  background: rgb(70, 150, 57);
+  background: linear-gradient(
+    149deg,
+    rgba(70, 150, 57, 1) 0%,
+    rgba(34, 94, 3, 1) 100%
+  );
+}
+
+.bolinha.vermelha {
+  animation: rodando-volta linear 2000ms infinite backwards;
+  background: rgb(203, 30, 37);
+  background: linear-gradient(
+    149deg,
+    rgba(203, 30, 37, 1) 0%,
+    rgba(139, 13, 9, 1) 100%
+  );
+}
+@keyframes rodando-volta {
+  to {
+    transform: rotate(0);
+  }
+  from {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rodando-frente {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
